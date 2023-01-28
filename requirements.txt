@@ -1,2 +1,6 @@
-pandas = '*'
-plotly = '*'
+plotly>5.4.0
+plotly_express>0.4
+numpy>1.23
+matplotlib>3.5
+pandas>1.4
+seaborn == 0.11.2
