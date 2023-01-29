@@ -52,7 +52,7 @@ data, total_amount = loan_amount(principal, interes_rate, term)
 
 # create a line graph with x axis as month and y axis as remaining principal
 fig_remining_principal = px.line(data, x='month', y='remaining_principal', template=template)
-fig_interest_payed = px.line(data, x='month', y='interest_amount', template=template)
+fig_interest_payed = px.line(data, x='month', y=['interest_amount', 'monthly_payment'], template=template)
 fig_interest_payment_ratio = px.line(data, x='month', y='interest_monthly_ratio', template=template)
 
 st.write('Monthly installment: ', round(data['monthly_payment'][0]))
@@ -68,8 +68,8 @@ if show_brake_down:
 st.markdown('## Remaining principal over time')
 st.plotly_chart(fig_remining_principal, theme=None)
 
-st.markdown('## Interest payed over time')
+st.markdown('## Monyhly installment breakdown per month over time')
 st.plotly_chart(fig_interest_payed, theme=None)
 
-st.markdown('## Interest payment / monthly instalment over time')
+st.markdown('## Interest / monthly payment instalment over time')
 st.plotly_chart(fig_interest_payment_ratio, theme=None)
