@@ -68,7 +68,7 @@ if show_brake_down:
 st.markdown('## Remaining principal over time')
 st.plotly_chart(fig_remining_principal, theme=None)
 
-st.markdown('## Monyhly installment breakdown per month over time')
+st.markdown('## Monthly installment breakdown per month over time')
 st.plotly_chart(fig_interest_payed, theme=None)
 
 st.markdown('## Interest / monthly payment instalment over time')
